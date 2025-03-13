@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pubmed-cli"
+version = "0.1.0"
+description = "CLI tool to fetch PubMed papers with at least one author affiliated with a pharmaceutical/biotech company. Supports full PubMed query syntax for flexible searching."
+authors = ["binoopsebastian1999@gmail.com"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "pubmed_cli", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.28.1"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_cli.cli:main"
